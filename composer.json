@@ -1,0 +1,17 @@
+{
+    "name": "eduardo.lima/son-financas",
+    "authors": [
+        {
+            "name": "Eduardo Lima",
+            "email": "eduardoh.lima17@hotmail.com"
+        }
+    ],
+    "require": {
+        "robmorgan/phinx": "0.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SONFin\\": "src/"
+        }
+    }
+}
