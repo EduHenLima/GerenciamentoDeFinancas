@@ -31,9 +31,9 @@ return [
         'development' => [
             'adapter' => $driver,
             'host' => $host,
-            'database' => $database,
+            'name' => $database,
             'user' => $user,
-            'password' => $pass,
+            'pass' => $pass,
             'charset' => $charset,
             'collation' => $collation
         ]

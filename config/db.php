@@ -11,3 +11,4 @@ return [
         'collation' => 'uft_unicode_ci'
     ]
 ];
+
