@@ -8,20 +8,22 @@ class CategoryCostSeeder extends AbstractSeed
     /** Generate fake date to test */
     public function run()
     {
+        /** Call lib faker to create dates
+         * $faker content all date to insert in database, click in Factory to see
+         */
+        $faker = \Faker\Factory::create('pt_BR');
+
         /** select tp table for fake date $categoryCost */
         $categoryCost = $this->table('category_costs');
-        $categoryCost->insert([
-            /** Array with fake params */
-            [
-                'name' => 'Category 1',
+
+        $data = [];
+        foreach (range(1,10) as $value){
+            $data[] = [
+                'name' => $faker->name,
                 'created_at' => date('Y-m-d H:i:s'),
                 'update_at' => date('Y-m-d H:i:s')
-            ],
-            [
-                'name' => 'Category 2',
-                'created_at' => date('Y-m-d H:i:s'),
-                'update_at' => date('Y-m-d H:i:s')
-            ]
-        ])->save();
+            ];
+        }
+        $categoryCost->insert($data)->save();
     }
 }
