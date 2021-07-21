@@ -16,5 +16,8 @@ vendor/bin/phinx rollback -t=0
 Generate all seeders in file
 vendor/bin/phinx seed:run
 
-#Faker
+# Faker
 Excelent lib to generate dates to insert in your bank 
+
+# Run service
+php -S localhost:8080 -t public public/index.php
