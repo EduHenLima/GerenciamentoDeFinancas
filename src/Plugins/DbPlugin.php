@@ -17,6 +17,8 @@ class DbPlugin implements PluginInterface
     {
         $capsule = new Capsule();
         $config = include __DIR__ . '/../../config/db.php';
+
         $capsule->addConnection($config['development']);
+        $capsule->bootEloquent();
     }
 }

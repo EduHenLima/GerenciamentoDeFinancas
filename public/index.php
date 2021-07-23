@@ -3,6 +3,7 @@
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use SONFin\Application;
+use SONFin\Models\CategoryCosts;
 use SONFin\Plugins\DbPlugin;
 use SONFin\Plugins\RouterPlugin;
 use SONFin\Plugins\ViewPlugin;
@@ -32,8 +33,14 @@ $app->get('/home/{name}/{id}', function (ServerRequestInterface $request){
 });
 
 $app->get('/category-costs', function () use($app){
+
+    $categoryCosts = new CategoryCosts();
+    $categories = $categoryCosts->all();
+
     $view = $app->service('view.renderer');
-    return $view->render('category-costs/list.html.twig');
+    return $view->render('category-costs/list.html.twig',[
+        'categories' => $categories
+    ]);
 });
 
 $app->get('/teste/{name}', function (ServerRequestInterface $request) use($app){
