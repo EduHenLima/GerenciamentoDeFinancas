@@ -3,6 +3,7 @@
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use SONFin\Application;
+use SONFin\Plugins\DbPlugin;
 use SONFin\Plugins\RouterPlugin;
 use SONFin\Plugins\ViewPlugin;
 use SONFin\ServiceContainer;
@@ -14,6 +15,7 @@ $app = new Application($serviceContainer);
 
 $app->plugin(new RouterPlugin());
 $app->plugin(New ViewPlugin());
+$app->plugin(new DbPlugin());
 
 /**
  * To generate new route, only create a new params in $app->get
