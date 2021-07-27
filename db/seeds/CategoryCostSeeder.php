@@ -21,7 +21,7 @@ class CategoryCostSeeder extends AbstractSeed
             $data[] = [
                 'name' => $faker->name,
                 'created_at' => date('Y-m-d H:i:s'),
-                'update_at' => date('Y-m-d H:i:s')
+                'updated_at' => date('Y-m-d H:i:s')
             ];
         }
         $categoryCost->insert($data)->save();
