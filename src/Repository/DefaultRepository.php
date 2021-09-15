@@ -56,8 +56,8 @@ class DefaultRepository implements RepositoryInterface
       return $failIfNotExist ? $this->model->findOrFail($id) : $this->model->find($id);
     }
 
-    public function findByField(string $field,$value): array
+    public function findByField(string $field,$value)
     {
-        return $this->model->where($field,'=',$value)->toArray();
+        return $this->model->where($field,'=',$value)->get();
     }
 }

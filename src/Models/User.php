@@ -7,7 +7,7 @@ namespace SONFin\Models;
 use Illuminate\Database\Eloquent\Model;
 use Jasny\Auth\User as JasnyUser;
 
-class User extends Model implements JasnyUser
+class User extends Model implements JasnyUser,UserInterface
 {
     // Mass Assignment
     protected $fillable = [
@@ -16,18 +16,6 @@ class User extends Model implements JasnyUser
         'email',
         'password',
     ];
-    /**
-     * @var mixed
-     */
-    private $id;
-    /**
-     * @var mixed
-     */
-    private $email;
-    /**
-     * @var mixed
-     */
-    private $password;
 
     public function getId(): int
     {
@@ -52,5 +40,20 @@ class User extends Model implements JasnyUser
     public function onLogout()
     {
         // TODO: Implement onLogout() method.
+    }
+
+    public function getFullname(): string
+    {
+        return "{$this->firstname}  {$this->lastname}";
+    }
+
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    public function getPassword(): string
+    {
+        return $this->password;
     }
 }

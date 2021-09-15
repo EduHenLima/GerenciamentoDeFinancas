@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'bb319e0f429586571980a9defc003d352288a6c9',
+    'reference' => '8416699771dce3056569ad375770ee55db526ea9',
     'name' => 'eduardo.lima/son-financas',
   ),
   'versions' => 
@@ -71,7 +71,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'bb319e0f429586571980a9defc003d352288a6c9',
+      'reference' => '8416699771dce3056569ad375770ee55db526ea9',
     ),
     'fzaninotto/faker' => 
     array (

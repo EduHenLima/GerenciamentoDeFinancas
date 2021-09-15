@@ -8,10 +8,16 @@ $app
     return $view->render('auth/login.html.twig');
     }, 'auth.show_login_form')
     ->post('/login', function (ServerRequestInterface $request) use ($app){
-        $app->service('auth')->login();
-        // Todo: Continuar daqui
-        $repository = $app->service('category-cost.repository');
+        $view = $app->service('view.renderer');
+        $auth = $app->service('auth');
         $data = $request->getParsedBody();
-        $repository->create($data);
+        $result = $auth->login($data);
+        if(!$result){
+            return $view->render('auth/login.html.twig');
+        }
         return $app->route('category-costs.list');
-    }, 'auth.login');
+    }, 'auth.login')
+    ->get('/logout', function () use($app){
+        $app->service('auth')->logout();
+        return $app->route('auth.show_login_form');
+    }, 'auth.logout');

@@ -22,5 +22,3 @@ Excelent lib to generate dates to insert in your bank
 # Run service
 php -S localhost:8080 -t public public/index.php
 
-TODO: AJEITAR O COMMIT POIS ESTÁ COM SSH CONFIGURANDO
-GIT NÃO ACEITA MAIS SSH
