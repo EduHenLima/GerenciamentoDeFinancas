@@ -10,6 +10,7 @@ use SONFin\Plugins\ViewPlugin;
 use SONFin\ServiceContainer;
 
 require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../src/helpers.php';
 
 $serviceContainer = new ServiceContainer();
 $app = new Application($serviceContainer);
@@ -34,7 +35,10 @@ $app->get('/home/{name}/{id}', function (ServerRequestInterface $request){
 });
 
 /** Always we create a new controller, needs import the file */
+require_once __DIR__ . '/../src/controllers/statements.php';
 require_once __DIR__ . '/../src/controllers/category-costs.php';
+require_once __DIR__ . '/../src/controllers/bill-receives.php';
+require_once __DIR__ . '/../src/controllers/bill-pays.php';
 require_once __DIR__ . '/../src/controllers/users.php';
 require_once __DIR__ . '/../src/controllers/auth.php';
 
