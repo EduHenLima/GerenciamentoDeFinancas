@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '8416699771dce3056569ad375770ee55db526ea9',
+    'reference' => '02182ef9eec151120111beb327ba42076e93fa11',
     'name' => 'eduardo.lima/son-financas',
   ),
   'versions' => 
@@ -71,7 +71,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '8416699771dce3056569ad375770ee55db526ea9',
+      'reference' => '02182ef9eec151120111beb327ba42076e93fa11',
     ),
     'fzaninotto/faker' => 
     array (
@@ -213,6 +213,15 @@ private static $installed = array (
       ),
       'reference' => '4e058f2df00f58f654d7983f3943b327bf046c7c',
     ),
+    'squizlabs/php_codesniffer' => 
+    array (
+      'pretty_version' => '2.2.0',
+      'version' => '2.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b301c98f19414d836fdaa678648745fcca5aeb4f',
+    ),
     'symfony/config' => 
     array (
       'pretty_version' => 'v3.4.47',
@@ -316,6 +325,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '2311602f6a208715252febe682fa7c38e56a3373',
+    ),
+    'vlucas/phpdotenv' => 
+    array (
+      'pretty_version' => 'v2.4.0',
+      'version' => '2.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c',
     ),
     'xtreamwayz/pimple-container-interop' => 
     array (

@@ -10,6 +10,12 @@ use SONFin\Plugins\ViewPlugin;
 use SONFin\ServiceContainer;
 
 require_once __DIR__ . '/../vendor/autoload.php';
+
+if(file_exists(__DIR__.'/../.env')){
+    $dotenv = new \Dotenv\Dotenv(__DIR__ . '/../');
+    $dotenv->overload();
+}
+
 require_once __DIR__ . '/../src/helpers.php';
 
 $serviceContainer = new ServiceContainer();
@@ -35,6 +41,7 @@ $app->get('/home/{name}/{id}', function (ServerRequestInterface $request){
 });
 
 /** Always we create a new controller, needs import the file */
+require_once __DIR__ . '/../src/controllers/charts.php';
 require_once __DIR__ . '/../src/controllers/statements.php';
 require_once __DIR__ . '/../src/controllers/category-costs.php';
 require_once __DIR__ . '/../src/controllers/bill-receives.php';
